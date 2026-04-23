@@ -6,14 +6,14 @@ The automation reduces manual effort, improves consistency, and reflects real-wo
 ## Table of Contents
 
 ### Project Goals
--• Streamline User Management: Automate repetitive Active Directory user management tasks to improve administrative efficiency.
--• Enhance Efficiency: Minimize manual effort and reduce time spent on user account operations through automation.
--• Ensure Consistency: Maintain standardized and consistent user account configurations across the organization. 
+- • Streamline User Management: Automate repetitive Active Directory user management tasks to improve administrative efficiency.
+- • Enhance Efficiency: Minimize manual effort and reduce time spent on user account operations through automation.
+- • Ensure Consistency: Maintain standardized and consistent user account configurations across the organization. 
 
 ### Features
--• User Creation: Automate the provisioning of new user accounts in Active Directory using PowerShell.
--• User Modification: Update and manage user attributes such as title, department, and email efficiently.
--• User Deletion: Securely deprovision and remove user accounts from Active Directory.
+- • User Creation: Automate the provisioning of new user accounts in Active Directory using PowerShell.
+- • User Modification: Update and manage user attributes such as title, department, and email efficiently.
+- • User Deletion: Securely deprovision and remove user accounts from Active Directory.
 
 ### Prerequisites
 To use these scripts, the following prerequisites are required:
