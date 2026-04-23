@@ -1,23 +1,23 @@
-Active Directory User Lifecycle Management
+#Active Directory User Lifecycle Management
 
-Overview
+### Overview
 This project demonstrates core Identity and Access Management (IAM) concepts using Microsoft Active Directory. It focuses on managing the complete user lifecycle, including user creation, modification, and access control.
 
 ---
 
-Objective
+### Objective
 To understand and implement user lifecycle management in an enterprise environment using Active Directory.
 
 ---
 
-Tools & Technologies
+### Tools & Technologies
 - Windows Server
 - Active Directory Domain Services (AD DS)
 - PowerShell
 
 ---
 
-Key Concepts Covered
+ ### Key Concepts Covered
 - User Provisioning
 - Authentication & Authorization
 - Role-Based Access Control (RBAC)
@@ -26,38 +26,38 @@ Key Concepts Covered
 
 ---
 
-Tasks Performed
+### Tasks Performed
 
- 1. User Creation
+### 1. User Creation
 - Created multiple users in Active Directory
 - Assigned usernames and passwords
 
- 2. Group Management
+### 2. Group Management
 - Created security groups (HR, IT, Finance)
 - Added users to respective groups
 
- 3. Access Control
+### 3. Access Control
 - Assigned permissions based on group roles
 - Implemented Role-Based Access Control (RBAC)
 
- 4. Password Management
+### 4. Password Management
 - Configured password policies
 - Reset user passwords
 
- 5. Account Management
+### 5. Account Management
 - Disabled inactive accounts
 - Deleted unnecessary users
 
 ---
 
- Automation (PowerShell)
+### Automation (PowerShell)
 Used PowerShell scripts to automate:
 - Bulk user creation
 - Group assignment
 
 ---
 
-  Screenshots
+ ### Screenshots
 (Add screenshots here)
 - User creation
 - Group management
@@ -65,7 +65,7 @@ Used PowerShell scripts to automate:
 
 ---
 
- Outcome
+ ### Outcome
 - Gained hands-on experience in IAM fundamentals
 - Understood how organizations manage user access
 - Learned automation using PowerShell
