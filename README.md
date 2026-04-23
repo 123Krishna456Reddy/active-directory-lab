@@ -1,78 +1,37 @@
-# Active Directory User Lifecycle Management
+# Automated User Management with PowerShell
+This project demonstrates automated user lifecycle management in Active Directory using PowerShell. It focuses on Identity and Access Management (IAM) concepts such as user provisioning, modification, and deprovisioning.
 
-### Overview
-This project demonstrates core Identity and Access Management (IAM) concepts using Microsoft Active Directory. It focuses on managing the complete user lifecycle, including user creation, modification, and access control.
+The automation reduces manual effort, improves consistency, and reflects real-world enterprise user management practices.
 
----
+## Table of Contents
 
-### Objective
-To understand and implement user lifecycle management in an enterprise environment using Active Directory.
+### Project Goals
+•Streamline User Management: Automate repetitive Active Directory user management tasks to improve administrative efficiency.
+•Enhance Efficiency: Minimize manual effort and reduce time spent on user account operations through automation.
+•Ensure Consistency: Maintain standardized and consistent user account configurations across the organization. 
 
----
+### Features
+•User Creation: Automate the provisioning of new user accounts in Active Directory using PowerShell.
+•User Modification: Update and manage user attributes such as title, department, and email efficiently.
+•User Deletion: Securely deprovision and remove user accounts from Active Directory.
 
-### Tools & Technologies
-- Windows Server
-- Active Directory Domain Services (AD DS)
-- PowerShell
+### Prerequisites
+To use these scripts, the following prerequisites are required:
 
----
+•A system running Windows Server or Windows 10 with Remote Server Administration Tools (RSAT) installed
+•Active Directory Module for Windows PowerShell
+•Appropriate administrative permissions to perform user management tasks in Active Directory
 
- ### Key Concepts Covered
-- User Provisioning
-- Authentication & Authorization
-- Role-Based Access Control (RBAC)
-- Account Management
-- Security Policies
+### Usage Instructions
+### Step 1: Import the Active Directory Module
+Before executing any scripts, import the Active Directory module to access the required cmdlets.
+```powershell
+Import-Module ActiveDirectory
+```
+### Screenshot:
+## 📸 Screenshot
 
----
+![User Creation](screenshot_01.png)
 
-### Tasks Performed
 
-### 1. User Creation
-- Created multiple users in Active Directory
-- Assigned usernames and passwords
 
-### 2. Group Management
-- Created security groups (HR, IT, Finance)
-- Added users to respective groups
-
-### 3. Access Control
-- Assigned permissions based on group roles
-- Implemented Role-Based Access Control (RBAC)
-
-### 4. Password Management
-- Configured password policies
-- Reset user passwords
-
-### 5. Account Management
-- Disabled inactive accounts
-- Deleted unnecessary users
-
----
-
-### Automation (PowerShell)
-Used PowerShell scripts to automate:
-- Bulk user creation
-- Group assignment
-
----
-
- ### Screenshots
-(Add screenshots here)
-- User creation
-- Group management
-- Policy configuration
-
----
-
- ### Outcome
-- Gained hands-on experience in IAM fundamentals
-- Understood how organizations manage user access
-- Learned automation using PowerShell
-
----
-
- Future Improvements
-- Integrate with cloud IAM (AWS/Azure)
-- Implement multi-factor authentication (MFA)
-- Connect with SIEM for monitoring
