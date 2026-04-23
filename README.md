@@ -63,6 +63,122 @@ New-ADUser -SamAccountName $Username `
 # Confirmation message
 Write-Host "User '$Username' has been created successfully."
 ```
+## Run command:
+```
+.\Create-User.ps1
+```
+### Screenshot:
+![Screenshot](Screenshot_02.png)
+![Screenshot](Screenshot_03.png)
+
+
+### Step 3: Modify User Attributes
+After creating a user, their attributes can be modified. This script updates user details to keep information accurate and up to date.
+
+```
+# Modify-User.ps1
+
+# Parameters
+param (
+    [string]$username = "User1",
+    [string]$title = "Sales Representative",
+    [string]$department = "Sales"
+)
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Modify the user
+Set-ADUser -Identity $username `
+           -Title $title `
+           -Department $department
+
+Write-Host "User $username modified successfully."
+```
+## Run command:
+```
+.\Modify-User.ps1
+```
+### Screenshot:
+![Screenshot](Screenshot_04.png)
+
+### Step 4: Delete a User Account
+When a user leaves the organization or no longer requires access, use this script to remove their account from Active Directory.
+
+```
+# Delete-User.ps1
+param (
+    [string]$username = "User1"
+)
+
+Import-Module ActiveDirectory
+
+Remove-ADUser -Identity $username -Confirm:$false
+
+Write-Host "User $username deleted successfully."
+```
+## Run command:
+```
+.\Delete-User.ps1
+```
+### Screenshot:
+![Screenshot](Screenshot_05.png)
+
+### Step 5: Full User Management Workflow
+For complete user lifecycle management, you can run a master script that performs user creation, modification, and deletion in sequence, simplifying bulk operations.
+```
+# UserManagement.ps1
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Create User
+.\Create-User.ps1 -username "User1" -password "Password@123" -firstName "John" -lastName "Doe" -OU "OU=india,DC=Cyber,DC=com"
+
+# Modify User
+.\Modify-User.ps1 -username "User1" -title "Sales Representative" -department "Sales"
+
+# Delete User
+.\Delete-User.ps1 -username "User1"
+```
+## Run Command:
+```
+.\UserManagement.ps1
+```
+### Screenshot:
+![Screenshot](Screenshot_06.png)
+
+## Troubleshooting
+### 1. Active Directory Module Not Loaded
+- Issue: The script fails with commands not recognized.
+- Solution: Ensure the Active Directory module is imported:
+  ```
+  Get-ADOrganizationalUnit -Filter *
+  ```
+### 2. Directory Object Not Found
+- Issue: New-ADUser fails with "Directory object not found."
+- Solution:
+    Verify the Organizational Unit (OU) exists using:
+  ```
+  Get-ADOrganizationalUnit -Filter *
+  ```
+- Ensure the Distinguished Name (DN) format is correct: OU=Users,DC=yourdomain,DC=com.
+
+### 3. Permissions Issue
+- Issue: The script fails due to insufficient permissions.
+- Solution: Run PowerShell as an Administrator and ensure the executing account has the necessary privileges to create users in the specified OU.
+### 4. Password Policy Violation
+- Issue: User creation fails due to the password not meeting requirements.
+- Solution: Ensure the password meets your domain's complexity requirements (e.g., length, characters).
+
+### Summary
+This project demonstrates automated Active Directory user lifecycle management using PowerShell, improving operational efficiency and ensuring consistent, accurate identity management practices.
+
+
+
+
+
+
 
 
 
