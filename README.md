@@ -6,21 +6,21 @@ The automation reduces manual effort, improves consistency, and reflects real-wo
 ## Table of Contents
 
 ### Project Goals
-•Streamline User Management: Automate repetitive Active Directory user management tasks to improve administrative efficiency.
-•Enhance Efficiency: Minimize manual effort and reduce time spent on user account operations through automation.
-•Ensure Consistency: Maintain standardized and consistent user account configurations across the organization. 
+• Streamline User Management: Automate repetitive Active Directory user management tasks to improve administrative efficiency.
+• Enhance Efficiency: Minimize manual effort and reduce time spent on user account operations through automation.
+• Ensure Consistency: Maintain standardized and consistent user account configurations across the organization. 
 
 ### Features
-•User Creation: Automate the provisioning of new user accounts in Active Directory using PowerShell.
-•User Modification: Update and manage user attributes such as title, department, and email efficiently.
-•User Deletion: Securely deprovision and remove user accounts from Active Directory.
+• User Creation: Automate the provisioning of new user accounts in Active Directory using PowerShell.
+• User Modification: Update and manage user attributes such as title, department, and email efficiently.
+• User Deletion: Securely deprovision and remove user accounts from Active Directory.
 
 ### Prerequisites
 To use these scripts, the following prerequisites are required:
 
-•A system running Windows Server or Windows 10 with Remote Server Administration Tools (RSAT) installed
-•Active Directory Module for Windows PowerShell
-•Appropriate administrative permissions to perform user management tasks in Active Directory
+• A system running Windows Server or Windows 10 with Remote Server Administration Tools (RSAT) installed
+• Active Directory Module for Windows PowerShell
+• Appropriate administrative permissions to perform user management tasks in Active Directory
 
 ### Usage Instructions
 ### Step 1: Import the Active Directory Module
@@ -29,7 +29,6 @@ Before executing any scripts, import the Active Directory module to access the r
 Import-Module ActiveDirectory
 ```
 ### Screenshot:
-## 📸 Screenshot
 
 ![User Creation](screenshot_01.png)
 
