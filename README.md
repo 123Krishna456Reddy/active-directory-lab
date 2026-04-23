@@ -32,5 +32,38 @@ Import-Module ActiveDirectory
 
 ![Screenshot](Screenshot_01.png)
 
+### Step 2: Create a New User
+
+Run the user creation script to add new users to Active Directory. This step involves specifying user details such as username, password, and organizational unit (OU).
+```
+# Create-User.ps1
+
+# Parameters
+param (
+    [string]$Username   = "user1",
+    [string]$Password   = "Password@123",
+    [string]$FirstName  = "John",
+    [string]$LastName   = "Doe",
+    [string]$OU         = "OU=Users,DC=example,DC=com"
+)
+
+# Import Active Directory Module
+Import-Module ActiveDirectory
+
+# Create new user in Active Directory
+New-ADUser -SamAccountName $Username `
+           -UserPrincipalName "$Username@example.com" `
+           -Name "$FirstName $LastName" `
+           -GivenName $FirstName `
+           -Surname $LastName `
+           -Path $OU `
+           -AccountPassword (ConvertTo-SecureString $Password -AsPlainText -Force) `
+           -Enabled $true
+
+# Confirmation message
+Write-Host "User '$Username' has been created successfully."
+```
+
+
 
 
