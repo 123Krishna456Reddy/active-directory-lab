@@ -30,7 +30,7 @@ Import-Module ActiveDirectory
 ```
 ### Screenshot:
 
-![](screenshot_01.png)
+![Screenshot](Screenshot_01.png)
 
 
 
